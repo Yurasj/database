@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/netflix1
+    username: root
+    password: abreviatura
+    driver-class-name: com.mysql.cj.jdbc.Driver

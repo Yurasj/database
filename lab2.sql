@@ -11,7 +11,7 @@ where place like '1_';
 
 -- 3. БД «Комп. фірма». Знайдіть номер моделі та виробника ПК, яка має
 -- ціну менше за 600 дол. Вивести: model, maker.
-SELECT DISTINCT maker, pc.model from 
+select DISTINCT maker, pc.model from 
 product JOIN pc WHERE pc.model = product.model and pc.price < 600;
 
 -- 4. БД «Комп. фірма». Знайти тих виробників ПК, усі моделі ПК яких є
@@ -32,7 +32,7 @@ select if(class is null, ship, class) as result_class
 -- 6. БД «Аеропорт». Для таблиці Pass_in_trip значення стовпця place
 -- розбити на два стовпця з коментарями, наприклад, перший – 'ряд: 2' та
 -- другий – 'місце: a'.
-SELECT concat("ряд: ", SUBSTRING(place, 1, 1)) as 'row', 
+select concat("ряд: ", SUBSTRING(place, 1, 1)) as 'row', 
 concat("місце: ", SUBSTRING(place, 2, 1)) as place FROM pass_in_trip;
 
 -- 7. БД «Комп. фірма». Знайдіть виробників найдешевших принтерів.
@@ -73,3 +73,4 @@ then classes.class end as unique_ship from classes
 union 
 select case when count(distinct ships.class) = count(ships.class)
 then ships.class end from ships;
+
