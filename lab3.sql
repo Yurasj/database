@@ -14,7 +14,7 @@ CREATE TABLE `movie`(
     company_id BIGINT NOT NULL,
     language_id BIGINT NOT NULL,
     actor_id BIGINT NOT NULL,
-    award_id BIGINT NOT NULL,
+    award_id BIGINT,
 	name VARCHAR(35) NOT NULL,
     info VARCHAR(1000) NOT NULL
 );
