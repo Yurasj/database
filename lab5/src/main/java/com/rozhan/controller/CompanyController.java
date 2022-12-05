@@ -34,6 +34,11 @@ public class CompanyController {
         return new ResponseEntity<>(companyDtos, HttpStatus.OK);
     }
 
+    @PostMapping(value = "/createDatabases")
+    public void createDatabases(){
+        companyService.dynamic_procedure();
+    }
+
 
     @PostMapping(value = "")
     public ResponseEntity<CompanyDto> addCompany(@RequestBody Company company) {

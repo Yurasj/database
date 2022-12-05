@@ -1,8 +1,8 @@
-package com.rozhan.service.impl;
+package com.rozhan.controller.service.impl;
 
 import com.rozhan.dao.LanguageDao;
 import com.rozhan.domain.Language;
-import com.rozhan.service.LanguageService;
+import com.rozhan.controller.service.LanguageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

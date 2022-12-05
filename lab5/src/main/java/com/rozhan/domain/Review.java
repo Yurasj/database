@@ -9,7 +9,7 @@ public class Review {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "id")
-    private Long id;
+    private Integer id;
     @Basic
     @Column(name = "comment")
     private String comment;
@@ -20,11 +20,11 @@ public class Review {
     @JoinColumn(name = "movie_id", referencedColumnName = "id", nullable = false)
     private Movie movieByMovieId;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

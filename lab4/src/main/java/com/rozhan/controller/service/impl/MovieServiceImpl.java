@@ -1,8 +1,8 @@
-package com.rozhan.service.impl;
+package com.rozhan.controller.service.impl;
 
 import com.rozhan.dao.MovieDao;
 import com.rozhan.domain.Movie;
-import com.rozhan.service.MovieService;
+import com.rozhan.controller.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

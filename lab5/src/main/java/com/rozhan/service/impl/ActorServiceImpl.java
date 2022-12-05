@@ -16,7 +16,7 @@ public class ActorServiceImpl implements ActorService {
     ActorRepository actorRepository;
 
 
-    public Actor findById(Integer id) {
+    public Actor findById(Long id) {
         return actorRepository.findById(id)
                 .orElseThrow(() -> new ActorNotFoundException(id));
     }
@@ -32,7 +32,7 @@ public class ActorServiceImpl implements ActorService {
     }
 
     @Transactional
-    public void update(Integer id, Actor uActor) {
+    public void update(Long id, Actor uActor) {
         Actor actor = actorRepository.findById(id)
                 .orElseThrow(() -> new ActorNotFoundException(id));
         //update
@@ -43,9 +43,22 @@ public class ActorServiceImpl implements ActorService {
     }
 
     @Transactional
-    public void delete(Integer id) {
+    public void delete(Long id) {
         Actor actor = actorRepository.findById(id)
                 .orElseThrow(() -> new ActorNotFoundException(id));
         actorRepository.delete(actor);
+    }
+
+    @Override
+    @Transactional
+    public void insertTenActors() {
+        actorRepository.insertTenActors();
+    }
+
+    @Override
+    @Transactional
+    public void insertActor(Actor actor) {
+        actorRepository.insertActorWithProcedure(actor.getFullName(),
+                actor.getBio(), actor.getAge());
     }
 }

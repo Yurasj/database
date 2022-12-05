@@ -21,7 +21,7 @@ public class ActorController {
     private ActorDtoAssembler actorDtoAssembler;
 
     @GetMapping(value = "/{actorId}")
-    public ResponseEntity<ActorDto> getActor(@PathVariable Integer actorId) {
+    public ResponseEntity<ActorDto> getActor(@PathVariable Long actorId) {
         Actor actor = actorService.findById(actorId);
         ActorDto actorDto = actorDtoAssembler.toModel(actor);
         return new ResponseEntity<>(actorDto, HttpStatus.OK);
@@ -36,21 +36,31 @@ public class ActorController {
 
 
     @PostMapping(value = "")
-    public ResponseEntity<ActorDto> addAward(@RequestBody Actor actor) {
+    public ResponseEntity<ActorDto> addActor(@RequestBody Actor actor) {
         Actor newActor = actorService.create(actor);
         ActorDto actorDto = actorDtoAssembler.toModel(newActor);
         return new ResponseEntity<>(actorDto, HttpStatus.CREATED);
     }
 
     @PutMapping(value = "/{actorId}")
-    public ResponseEntity<?> updateAward(@RequestBody Actor uActor, @PathVariable Integer actorId) {
+    public ResponseEntity<?> updateActor(@RequestBody Actor uActor, @PathVariable Long actorId) {
         actorService.update(actorId, uActor);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @DeleteMapping(value = "/{actorId}")
-    public ResponseEntity<?> deleteActor(@PathVariable Integer actorId) {
+    public ResponseEntity<?> deleteActor(@PathVariable Long actorId) {
         actorService.delete(actorId);
         return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @PostMapping(value = "/add10")
+    public void createTenActors(){
+        actorService.insertTenActors();
+    }
+
+    @PostMapping(value = "/addWithProcedure")
+    public void addActorWithProc(@RequestBody Actor actor){
+        actorService.insertActor(actor);
     }
 }

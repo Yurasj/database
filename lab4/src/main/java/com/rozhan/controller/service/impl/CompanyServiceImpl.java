@@ -1,8 +1,8 @@
-package com.rozhan.service.impl;
+package com.rozhan.controller.service.impl;
 
 import com.rozhan.dao.CompanyDao;
 import com.rozhan.domain.Company;
-import com.rozhan.service.CompanyService;
+import com.rozhan.controller.service.CompanyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

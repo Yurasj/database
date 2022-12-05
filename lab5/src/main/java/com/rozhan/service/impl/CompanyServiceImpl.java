@@ -47,4 +47,10 @@ public class CompanyServiceImpl implements CompanyService {
                 .orElseThrow(() -> new CompanyNotFoundException(id));
         companyRepository.delete(company);
     }
+
+    @Override
+    @Transactional
+    public void dynamic_procedure() {
+        companyRepository.dynamic_procedure();
+    }
 }

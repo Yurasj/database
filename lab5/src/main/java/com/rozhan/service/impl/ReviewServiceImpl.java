@@ -48,4 +48,10 @@ public class ReviewServiceImpl implements ReviewService {
                 .orElseThrow(() -> new ReviewNotFoundException(id));
         reviewRepository.delete(review);
     }
+
+    @Override
+    @Transactional
+    public void findMaxRatingByMovieId(Integer movieId) {
+        reviewRepository.findMaxRatingByMovieId(movieId);
+    }
 }

@@ -20,8 +20,7 @@ public class Actor {
     @Basic
     @Column(name = "age")
     private Integer age;
-    @OneToMany(mappedBy = "actor")
-    private Collection<Movie> moviesById;
+
 
     public Long getId() {
         return id;
@@ -68,11 +67,5 @@ public class Actor {
         return Objects.hash(id, fullName, bio, age);
     }
 
-    public Collection<Movie> getMoviesById() {
-        return moviesById;
-    }
 
-    public void setMoviesById(Collection<Movie> moviesById) {
-        this.moviesById = moviesById;
-    }
 }

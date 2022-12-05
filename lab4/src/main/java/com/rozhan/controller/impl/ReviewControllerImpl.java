@@ -2,7 +2,7 @@ package com.rozhan.controller.impl;
 
 import com.rozhan.controller.ReviewController;
 import com.rozhan.domain.Review;
-import com.rozhan.service.ReviewService;
+import com.rozhan.controller.service.ReviewService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

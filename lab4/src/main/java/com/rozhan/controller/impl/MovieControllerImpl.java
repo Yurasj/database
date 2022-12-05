@@ -2,7 +2,7 @@ package com.rozhan.controller.impl;
 
 import com.rozhan.controller.MovieController;
 import com.rozhan.domain.Movie;
-import com.rozhan.service.MovieService;
+import com.rozhan.controller.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

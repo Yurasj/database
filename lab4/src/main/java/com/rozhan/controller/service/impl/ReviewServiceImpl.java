@@ -1,8 +1,8 @@
-package com.rozhan.service.impl;
+package com.rozhan.controller.service.impl;
 
 import com.rozhan.dao.ReviewDao;
 import com.rozhan.domain.Review;
-import com.rozhan.service.ReviewService;
+import com.rozhan.controller.service.ReviewService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

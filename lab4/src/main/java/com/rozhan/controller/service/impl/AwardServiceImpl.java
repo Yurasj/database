@@ -1,8 +1,8 @@
-package com.rozhan.service.impl;
+package com.rozhan.controller.service.impl;
 
 import com.rozhan.dao.AwardDao;
 import com.rozhan.domain.Award;
-import com.rozhan.service.AwardService;
+import com.rozhan.controller.service.AwardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

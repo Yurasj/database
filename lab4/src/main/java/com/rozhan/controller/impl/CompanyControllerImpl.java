@@ -2,7 +2,7 @@ package com.rozhan.controller.impl;
 
 import com.rozhan.controller.CompanyController;
 import com.rozhan.domain.Company;
-import com.rozhan.service.CompanyService;
+import com.rozhan.controller.service.CompanyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

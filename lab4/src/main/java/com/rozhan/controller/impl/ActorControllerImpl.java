@@ -2,7 +2,7 @@ package com.rozhan.controller.impl;
 
 import com.rozhan.controller.ActorController;
 import com.rozhan.domain.Actor;
-import com.rozhan.service.ActorService;
+import com.rozhan.controller.service.ActorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

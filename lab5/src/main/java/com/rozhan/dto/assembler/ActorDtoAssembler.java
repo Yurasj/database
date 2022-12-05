@@ -20,7 +20,7 @@ public class ActorDtoAssembler implements RepresentationModelAssembler<Actor, Ac
                 .bio(entity.getBio())
                 .age(entity.getAge())
                 .build();
-        Link selfLink = linkTo(methodOn(ActorController.class).getActor(actorDto.getId())).withSelfRel();
+        Link selfLink = linkTo(methodOn(ActorController.class).getActor((long)actorDto.getId())).withSelfRel();
         actorDto.add(selfLink);
         return actorDto;
     }

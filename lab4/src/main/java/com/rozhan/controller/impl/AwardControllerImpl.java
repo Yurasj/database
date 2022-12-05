@@ -2,7 +2,7 @@ package com.rozhan.controller.impl;
 
 import com.rozhan.controller.AwardController;
 import com.rozhan.domain.Award;
-import com.rozhan.service.AwardService;
+import com.rozhan.controller.service.AwardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

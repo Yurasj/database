@@ -53,4 +53,9 @@ public class ReviewController {
         reviewService.delete(reviewId);
         return new ResponseEntity<>(HttpStatus.OK);
     }
+
+    @GetMapping("/findMaxRatingByMovieId/{movieId}")
+    public void findMaxRatingByMovie(@PathVariable Integer movieId){
+        reviewService.findMaxRatingByMovieId(movieId);
+    }
 }

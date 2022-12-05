@@ -51,4 +51,5 @@ public class MovieServiceImpl implements MovieService {
                 .orElseThrow(() -> new MovieNotFoundException(id));
         movieRepository.delete(movie);
     }
+
 }
